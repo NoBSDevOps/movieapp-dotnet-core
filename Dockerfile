@@ -5,10 +5,10 @@ EXPOSE 80
 
 WORKDIR /app
 
-COPY movieapp/*.csproj ./
+COPY ./*.csproj ./
 RUN dotnet restore
 
-COPY movieapp/ ./
+COPY . .
 RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
