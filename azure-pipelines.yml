@@ -6,7 +6,7 @@ resources:
 
 variables:
 
-  dockerRegistryServiceConnection: 'GUID'
+  dockerRegistryServiceConnection: 'DockerSrvConn'
   imageRepository: 'movieapp'
   containerRegistry: 'nobsreg.azurecr.io'
   dockerfilePath: '**/Dockerfile'
