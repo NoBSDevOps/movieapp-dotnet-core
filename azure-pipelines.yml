@@ -48,7 +48,6 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'NoBSDevOpsBookResources.default'
     strategy:
       runOnce:
         deploy:
