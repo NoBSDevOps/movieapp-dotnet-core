@@ -48,7 +48,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'movieapp-dotnet-core.default'
+    environment: 'movieapp-dotnet-core'
     strategy:
       runOnce:
         deploy:
