@@ -7,6 +7,7 @@ resources:
 variables:
 
   dockerRegistryServiceConnection: 'DockerSrvConn'
+  kubernetesServiceConnection: 'KubSrvConnection'
   imageRepository: 'movieapp'
   containerRegistry: 'nobsreg.azurecr.io'
   dockerfilePath: '**/Dockerfile'
@@ -59,7 +60,7 @@ stages:
               action: createSecret
               secretName: $(imagePullSecret)
               dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
-              
+              kubernetesServiceConnection: $(kubernetesServiceConnection)
           - task: KubernetesManifest@0
             displayName: Deploy to Kubernetes cluster
             inputs:
