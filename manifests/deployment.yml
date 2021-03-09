@@ -5,7 +5,6 @@ metadata:
   labels:
     app: movieapp
 spec:
-  progressDeadlineSeconds: 3600
   replicas: 1
   selector:
     matchLabels:
